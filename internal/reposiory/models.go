@@ -1,9 +1,9 @@
 package reposiory
 
 import (
+	"database/sql"
+	"encoding/json"
 	"time"
-
-	"github.com/Feresey/scbot/internal/infogetter"
 )
 
 type Corporation struct {
@@ -12,24 +12,34 @@ type Corporation struct {
 }
 
 type CorporationInfo struct {
-	ID        int `gorm:"primary_key"`
-	CorpID    int `gorm:"references:corporation.corp_id"`
+	ID        int           `gorm:"primary_key"`
+	CorpID    sql.NullInt32 `gorm:"references:corporation.corp_id"`
 	CreatedAt time.Time
 }
 
 type Player struct {
 	UserID    int `gorm:"primary_key"`
-	CorpID    int
+	Comment   string
 	CreatedAt time.Time
 }
 
 type PlayerInfo struct {
-	ID        int `gorm:"primary_key"`
-	UserID    int `gorm:"references:player.user_id"`
-	CorpID    int `gorm:"references:corporation.corp_id"`
-	NickName  string
-	Info      infogetter.PlayerInfo `gorm:"type:jsonb"`
+	ID        int           `gorm:"primary_key"`
+	UserID    int           `gorm:"references:player.user_id"`
+	CorpID    sql.NullInt32 `gorm:"references:corporation.corp_id"`
+	Nickname  string
+	Info      json.RawMessage `gorm:"type:jsonb"`
 	CreatedAt time.Time
+}
+
+type PlayerHistoryItem struct {
+	Nickname        string
+	Info            json.RawMessage
+	CorporationInfo *CorporationInfo
+}
+
+type PlayerHistory struct {
+	History []*PlayerHistoryItem
 }
 
 // type UserInfo struct {

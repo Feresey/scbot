@@ -5,10 +5,6 @@ data "template_dir" "migrations" {
 
 // Define an environment named "local"
 env "local" {
-  // Declare where the schema definition resides.
-  // Also supported: ["file://multi.hcl", "file://schema.hcl"].
-  src = "file://migrations/schema.hcl"
-
   // Define the URL of the database which is managed
   // in this environment.
   url = "postgres://postgres:pass@localhost:5432/postgres?sslmode=disable"
@@ -20,8 +16,4 @@ env "local" {
   migration {
     dir = data.template_dir.migrations.url
   }
-}
-
-env "dev" {
-  // ... a different env
 }
