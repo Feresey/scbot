@@ -1,0 +1,60 @@
+{
+  "result": "ok",
+  "code": 0,
+  "data": {
+    "effRating": 9064.203125,
+    "nickName": "SHAGAN",
+    "prestigeBonus": 2.66,
+    "uid": 2516405,
+    "accountRank": 25,
+    "pve": {
+      "gamePlayed": 4037,
+      "unlimPve_playerAttackLevel": 112,
+      "unlimPve_playerDefenceLevel": 51,
+      "unlimPve_missionLevels": {
+        "capture_repairbase_t1": 41,
+        "pve_jericho_base_t2": 36,
+        "planet_war_waves_T1": 64,
+        "asteroid_building_t1": 34,
+        "pve_frozen_station_t2": 37,
+        "nalnifan_lumen_waves_T1": 104,
+        "bigship_building_easy": 38,
+        "loot_geostation_normal": 37,
+        "pve_empfrontier_waves_T1": 31,
+        "bigship_building_2_easy": 70,
+        "pve_desttown_waves_easy": 33,
+        "piratebay_hard": 60,
+        "magnificent_seven": 12,
+        "rescue_pirates_base": 6,
+        "stealth": 2
+      },
+      "wavePve_maxWave": 37
+    },
+    "pvp": {
+      "gamePlayed": 13099,
+      "gameWin": 9081,
+      "totalAssists": 99076,
+      "totalBattleTime": 6305208160,
+      "totalDeath": 22631,
+      "totalDmgDone": 2004568107.6064,
+      "totalHealingDone": 517985279.787,
+      "totalKill": 79220,
+      "totalVpDmgDone": 184825.84596886
+    },
+    "coop": {
+      "gameWin": 908,
+      "gamePlayed": 919,
+      "totalBattleTime": 231704418
+    },
+    "openWorld": {
+      "karma": 347937
+    },
+    "clan": {
+      "name": "TerraLuX",
+      "tag": "LuX",
+      "cid": 1867,
+      "pvpRating": 36635,
+      "pveRating": 181187
+    }
+  }
+}
